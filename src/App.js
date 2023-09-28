@@ -1,3 +1,4 @@
+import React, { useState } from "react"
 import TutorialItem from './components/TutorialItem';
 
 const tutorials = [
@@ -19,18 +20,24 @@ const tutorials = [
   { id: '16', name: 'switch', url: 'https://d3h1vu2agxyise.cloudfront.net/Switch.mp4', thumbnail: 'img/witchcraft.jpg', title: 'Switch', comment: '' },
   // {id: '17', name: '', url: 'https://d3h1vu2agxyise.cloudfront.net/', thumbnail: '', title: '', comment: ''},
 ]
+const INITIAL_URL = 'https://d3h1vu2agxyise.cloudfront.net/ArrayToString.mp4'
+const INITIAL_NAME = 'Array To String'
 
 function App() {
+  const [name, setName] = useState(() => INITIAL_NAME)
+  const [url, setUrl] = useState(() => INITIAL_URL)
+
+  function updateVideoPlayer(props) {
+    setUrl(props.url)
+    setName(props.name)
+  }
+
   return (
     <div className="App">
-      {/* <section id="video-container">
-        <div id="player">
-          <ReactPlayer id="player" controls={true} light={false} playIcon={true} playing={true} url={'https://d3h1vu2agxyise.cloudfront.net/ArrayToString.mp4'} />
-        </div>
-      </section> */}
       <section class="row video-container" >
         <video class="col-12" id="player" autoplay muted controls >
-          <source src="https://d3h1vu2agxyise.cloudfront.net/ArrayToString.mp4" type="video/mp4" />
+          <caption> {name}</caption>
+          <source src={url} type="video/mp4" />
         </video>
       </section>
       <div class="row tm-mb-90 tm-gallery  ml-2 mr-2">

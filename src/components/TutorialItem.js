@@ -11,8 +11,7 @@ function TutorialItem(props) {
                 <img id={props.title} src={props.thumbnail} alt={props.title + ' image'} />
                 <figcaption class="d-flex align-items-center justify-content-center">
                     <h2>{props.title}</h2>
-                    <a href="javascript:void(0);" onClick={() => loadVideo}
-                    />
+                    <a href="javascript:void(0);" onClick={() => loadVideo(props.url)} />
 
                 </figcaption>
             </figure>

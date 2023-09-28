@@ -1,6 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
-import ReactPlayer from 'react-player';
 import TutorialItem from './components/TutorialItem';
 
 const tutorials = [

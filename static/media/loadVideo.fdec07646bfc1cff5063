@@ -1,6 +1,0 @@
-import React from "react";
-
-function loadVideo(props) {
-
-}
-export default loadVideo;

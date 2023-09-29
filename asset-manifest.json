@@ -1,18 +1,16 @@
 {
   "files": {
-    "main.css": "/java-room-react-app/static/css/main.e43c6ca7.css",
-    "main.js": "/java-room-react-app/static/js/main.48fcfd56.js",
+    "main.css": "/java-room-react-app/static/css/main.3bccca83.css",
+    "main.js": "/java-room-react-app/static/js/main.b71b49a8.js",
     "static/js/787.69142c40.chunk.js": "/java-room-react-app/static/js/787.69142c40.chunk.js",
     "static/media/warm-and-cold-light.jpg": "/java-room-react-app/static/media/warm-and-cold-light.23b37d162594668247b9.jpg",
     "index.html": "/java-room-react-app/index.html",
-    "static/media/logo.svg": "/java-room-react-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "static/media/loadVideo": "/java-room-react-app/static/media/loadVideo.fdec07646bfc1cff5063",
-    "main.e43c6ca7.css.map": "/java-room-react-app/static/css/main.e43c6ca7.css.map",
-    "main.48fcfd56.js.map": "/java-room-react-app/static/js/main.48fcfd56.js.map",
+    "main.3bccca83.css.map": "/java-room-react-app/static/css/main.3bccca83.css.map",
+    "main.b71b49a8.js.map": "/java-room-react-app/static/js/main.b71b49a8.js.map",
     "787.69142c40.chunk.js.map": "/java-room-react-app/static/js/787.69142c40.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e43c6ca7.css",
-    "static/js/main.48fcfd56.js"
+    "static/css/main.3bccca83.css",
+    "static/js/main.b71b49a8.js"
   ]
 }

@@ -1,9 +1,11 @@
 import React, { useState } from "react"
 import TutorialItem from './components/TutorialItem';
 import ReactPlayer from 'react-player'
+
 import Instruction from './components/Instruction';
 import TitleSection from "./components/TitleSection";
 import FooterSection from "./components/FooterSection";
+import VideoSection from "./components/VideoSection";
 
 function App() {
 
@@ -59,37 +61,10 @@ function App() {
 
       <Instruction />
 
-      <section class="row video-container" >
-      </section>
-      <section class="row video-container" >
-        <video class="col-12" id="player" autoplay controls >
-          <source id='video-source' src={aUrl} type="video/mp4" />
-        </video>
-      </section>
-      <div class="row tm-mb-90 tm-gallery  ml-2 mr-2">
-        {
-          tutorials.map((a) => (<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-            <figure class="effect-ming tiles">
-              <img src={process.env.PUBLIC_URL + a.thumbnail} alt={a.title + ' image'} />
-              <figcaption class="d-flex align-items-center justify-content-center">
-                <h2>{a.title}</h2>
-                <a href="#player" onClick={() => handleClick(a.url)} />
-              </figcaption>
-            </figure>
-          </div>))
-        }
-      </div>
-
-      <div class="row tm-mb-90">
-        <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col">
-        </div>
-      </div>
+      <VideoSection tutorials={tutorials} />
 
       <FooterSection />
 
-
-      {/* 
-      */}
     </div>
   );
 }

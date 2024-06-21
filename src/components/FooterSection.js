@@ -22,9 +22,10 @@ function FooterSection() {
                 </div>
                 <div class="row">
                     <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
+                        <hr></hr>
+                        <p>Copyright 2023 Yamakodev Company. All rights reserved.</p>
                         <p><a href="https://templatemo.com/tm-556-catalog-z" target="_blank">
                             Reference: Tiles hover animation css code</a></p>
-                        <p>Copyright 2023 Yamakodev Company. All rights reserved.</p>
                     </div>
                 </div>
             </div>

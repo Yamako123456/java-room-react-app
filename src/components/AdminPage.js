@@ -1,7 +1,10 @@
+import { useState } from "react";
 import VideoTable from "./VideoTable"
 
 function AdminPage({ tutorials, setTutorials }) {
 
+    const [selectedVideo, setSelectedVideo] = useState('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4');
+    const [selectedCaption, setSelectedCaption] = useState('Big Buck Bunny');
     let maxId = tutorials.length;
 
     const addVideo = () => {
@@ -17,14 +20,12 @@ function AdminPage({ tutorials, setTutorials }) {
 
         setTutorials(tutorials => [...tutorials, newVideo])
     }
-    let selectedVideo = 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
-    let selectedCaption = 'Big Buck Bunny';
 
     const videoSelected = (event) => {
-        alert(event.target.options[event.target.selectedIndex].text);
+        // alert(event.target.options[event.target.selectedIndex].text);
 
-        selectedVideo = event.target.value;
-        selectedCaption = event.target.options[event.target.selectedIndex].text;
+        setSelectedVideo(event.target.value);
+        setSelectedCaption(event.target.options[event.target.selectedIndex].text);
     }
 
     return (

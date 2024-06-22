@@ -6,7 +6,7 @@ function VideoTable(props) {
             <thead>
                 <tr>
                     <th scope="col">Video ID</th>
-                    <th scope="col">Video Name</th>
+                    <th scope="col">Video Title</th>
                     <th scope="col">Video Url</th>
                     <th scope="col">Thumbnail Url</th>
                 </tr>
@@ -15,7 +15,7 @@ function VideoTable(props) {
                 {props.tutorials.map(elem => (
                     <VideoRow
                         vidId={elem.id}
-                        vidName={elem.name}
+                        vidName={elem.title}
                         vidUrl={elem.url}
                         vidThumbnailUrl={elem.thumbnail}
                     />

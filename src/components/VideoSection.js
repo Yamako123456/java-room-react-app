@@ -7,7 +7,7 @@ function VideoSection(props) {
     const TEST_URL = 'https://d3h1vu2agxyise.cloudfront.net/UnaryOperators.mp4'
     const INITIAL_NAME = 'Array To String'
 
-    const [name, setName] = useState(() => INITIAL_NAME)
+    const [videoTitle, setVideoTitle] = useState(INITIAL_NAME);
     const [aUrl, setUrl] = useState(() => INITIAL_URL)
 
     function resetPlayer() {
@@ -16,6 +16,8 @@ function VideoSection(props) {
         const source = document.getElementById('video-source');
         video.pause()
         source.setAttribute('src', aUrl)
+        video.title = videoTitle;
+
         video.load();
         video.play();
     }

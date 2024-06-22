@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import AdminPage from './AdminPage';
-function FooterSection(props) {
+
+function FooterSection({ tutorials, setTutorials }) {
+    // Don't ever forget curly brackets when you pass multiple props. 
+    // If you forget, no matter how many parameters you have, it'll put everything in to the first parameter just like props
     return (
         <div>
             <footer class=" footer-container d-flex  pb-3">
@@ -42,7 +45,7 @@ function FooterSection(props) {
                 </div>
             </footer>
             <section class=" footer-container d-flex  pb-3">
-                <AdminPage tutorials={props.tutorials} />
+                <AdminPage tutorials={tutorials} setTutorials={setTutorials} />
             </section>
         </div>
     )

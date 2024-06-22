@@ -1,6 +1,7 @@
 import VideoRow from "./VideoRow"
 
-function VideoTable(props) {
+function VideoTable({ tutorials }) {
+    console.log('hello');
     return (
         <table className="table table-hover">
             <thead>
@@ -12,16 +13,14 @@ function VideoTable(props) {
                 </tr>
             </thead>
             <tbody>
-                {props.tutorials.map(elem => (
+                {tutorials.map(elem => (
                     <VideoRow
                         vidId={elem.id}
                         vidName={elem.title}
                         vidUrl={elem.url}
                         vidThumbnailUrl={elem.thumbnail}
                     />
-                )
-
-                )}
+                ))}
             </tbody>
         </table>
     )

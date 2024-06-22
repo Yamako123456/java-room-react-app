@@ -27,6 +27,10 @@ function AdminPage({ tutorials, setTutorials }) {
         setSelectedVideo(event.target.value);
         setSelectedCaption(event.target.options[event.target.selectedIndex].text);
     }
+    const resetVideoList = () => {
+
+        window.location.reload()
+    }
 
     return (
         <div class="container">
@@ -34,14 +38,14 @@ function AdminPage({ tutorials, setTutorials }) {
             <div className='mt-5 container'>
                 <div className='card'>
                     <div className='card-header'>
-                        Demo For Add New Videos
+                        <h1>Demo: Add New Videos</h1>
                     </div>
                     <div className='card-body'>
 
                         <VideoTable tutorials={tutorials} />
 
                         <button className="btn btn-primary" onClick={addVideo}>
-                            Add Video (Demo)
+                            Add Video  (Demo)
                         </button>
 
                         <label for="videos">Choose a video to add:</label>
@@ -54,6 +58,9 @@ function AdminPage({ tutorials, setTutorials }) {
                             <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4">Tears of Steel</option>
 
                         </select>
+                        <button className="btn btn-primary" onClick={resetVideoList}>
+                            Reset Video List  (Demo)
+                        </button>
 
                     </div>
                 </div>

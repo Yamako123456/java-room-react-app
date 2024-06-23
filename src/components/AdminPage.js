@@ -33,38 +33,48 @@ function AdminPage({ tutorials, setTutorials }) {
     }
 
     return (
-        <div class="container">
 
-            <div className='mt-5 container'>
-                <div className='card'>
-                    <div className='card-header'>
-                        <h1>Demo: Add New Videos</h1>
-                    </div>
-                    <div className='card-body'>
 
-                        <VideoTable tutorials={tutorials} />
+        <div className='mt-5 container'>
+            <div className='card'>
+                <div className='card-header'>
+                    <h1>Demo - add new video</h1>
+                </div>
+                <div className='card-body'>
 
-                        <button className="btn btn-primary" onClick={addVideo}>
-                            Add Video  (Demo)
-                        </button>
+                    {/* <VideoTable tutorials={tutorials} /> */}
 
-                        <label for="videos">Choose a video to add:</label>
-                        <select id="videos" name="videos" onChange={videoSelected} >
-                            <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">Big Buck Bunny</option>
-                            <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">For Bigger Blazes</option>
-                            <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4">Elephant Dream</option>
-                            <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">For Bigger Joyrides</option>
-                            <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4">Sintel</option>
-                            <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4">Tears of Steel</option>
+                    <div className="mt-5">
+                        <form>
+                            <div className="mb3">
+                                <label className="form-label" for="videos">Choose a video from the list:</label>
+                                <select id="videos" name="videos" className="form-control" onChange={videoSelected} >
+                                    <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">Big Buck Bunny</option>
+                                    <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">For Bigger Blazes</option>
+                                    <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4">Elephant Dream</option>
+                                    <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">For Bigger Joyrides</option>
+                                    <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4">Sintel</option>
+                                    <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4">Tears of Steel</option>
+                                </select>
+                            </div>
+                            <button type='button' className="btn btn-primary" onClick={addVideo}>
+                                Add Video
+                            </button>
+                        </form>
 
-                        </select>
-                        <button className="btn btn-primary" onClick={resetVideoList}>
-                            Reset Video List  (Demo)
-                        </button>
-
+                        <div className="mt-5">
+                            <div className="mb3">
+                                <button type='button' className="btn btn-primary" onClick={resetVideoList}>
+                                    Clear Added Videos
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+
             </div>
+
         </div>
     )
 }

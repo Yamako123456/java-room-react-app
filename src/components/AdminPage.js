@@ -34,7 +34,6 @@ function AdminPage({ tutorials, setTutorials }) {
 
     return (
 
-
         <div className='mt-5 container'>
             <div className='card'>
                 <div className='card-header'>
@@ -71,10 +70,7 @@ function AdminPage({ tutorials, setTutorials }) {
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
     )
 }

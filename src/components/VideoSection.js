@@ -7,9 +7,24 @@ function VideoSection(props) {
     const INITIAL_URL = 'https://d3h1vu2agxyise.cloudfront.net/Switch.mp4'
     const TEST_URL = 'https://d3h1vu2agxyise.cloudfront.net/UnaryOperators.mp4'
     const INITIAL_NAME = 'Array To String'
+    const INITIAL_COMMENT =
+
+        'public class ArrayToString {' + '\n' +
+        '\t' + 'public static void main(String[] args) {' + '\n' +
+        '\t\t' + 'String[] sArray = { "Hello", " ", "world!"};' + '\n' +
+        '\t\t' + 'System.out.println(sArray);' + '\n' +
+        '\t\t' + 'int[] intArray = { 1, 2, 3, 4, 6};' + '\n' +
+        '\t\t' + 'System.out.println(intArray);' + '\n' +
+        '\t\t' + 'char[] chArray = { \'H\', \'e\', \'l\', \'l\', \'o\'};' + '\n' +
+        '\t\t' + 'System.out.println(chArray);' + '\n' +
+        '\t\t' + 'Character[] chArray2 = { \'w\', \'o\', \'r\', \'l\', \'d\', \'!\'};' + '\n' +
+        '\t\t' + 'System.out.println(chArray2);' + '\n' +
+        '\t' + '}' + '\n' +
+        '}' + '\n';
 
     const [videoTitle, setVideoTitle] = useState(INITIAL_NAME);
     const [aUrl, setUrl] = useState(() => INITIAL_URL)
+    const [comment, setComment] = useState(() => INITIAL_COMMENT);
 
     function resetPlayer() {
         const name = ''
@@ -24,10 +39,11 @@ function VideoSection(props) {
     }
 
 
-    function handleClick(vidUrl, vidTitle) {
+    function handleClick(vidUrl, vidTitle, vidComment) {
 
         setUrl(vidUrl)
         setVideoTitle(vidTitle)
+        setComment(vidComment)
         resetPlayer()
     }
 
@@ -44,6 +60,14 @@ function VideoSection(props) {
                         </video>
                     </section>
                 </div>
+                <div className='card-body'>
+                    <p>
+                        After guess the answer in the video, try it out. Copy and paste the following code to editor at the end of this page and click Execute!
+                    </p>
+                    <hr />
+                    <pre>{comment}</pre>
+                </div>
+
             </div>
             <br />
             <div class="row tm-mb-90 tm-gallery  ml-2 mr-2">
@@ -54,7 +78,7 @@ function VideoSection(props) {
                                 <img src={process.env.PUBLIC_URL + a.thumbnail} alt={a.title + ' image'} />
                                 <figcaption class="d-flex align-items-center justify-content-center">
                                     <h2>{a.title}</h2>
-                                    <a href="#player" onClick={() => handleClick(a.url, a.title)} />
+                                    <a href="#player" onClick={() => handleClick(a.url, a.title, a.comment)} />
                                 </figcaption>
                             </figure>
                         </div>))

@@ -6,7 +6,7 @@ import Instruction from './Instruction';
 import TitleSection from "./TitleSection";
 import FooterSection from "./FooterSection";
 import VideoSection from "./VideoSection";
-
+import AdminPage from "./AdminPage";
 
 
 function HomePage() {
@@ -37,7 +37,9 @@ function HomePage() {
 
             <VideoSection tutorials={tutorials} />
 
-            <FooterSection tutorials={tutorials} setTutorials={setTutorials} />
+
+            <AdminPage tutorials={tutorials} setTutorials={setTutorials} />
+
 
         </div>
     );

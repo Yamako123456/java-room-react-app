@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import TutorialItem from './TutorialItem';
 import ReactPlayer from 'react-player'
+import EditorSection from "./EditorSection";
 
 function VideoSection(props) {
     const INITIAL_URL = 'https://d3h1vu2agxyise.cloudfront.net/Switch.mp4'
@@ -23,21 +24,28 @@ function VideoSection(props) {
     }
 
 
-    function handleClick(vidUrl) {
+    function handleClick(vidUrl, vidTitle) {
 
         setUrl(vidUrl)
+        setVideoTitle(vidTitle)
         resetPlayer()
     }
 
     return (
-        <div>
-
-            <section class="row video-container" >
-                <video class="col-12" id="player" autoplay controls >
-                    <source id='video-source' src={aUrl} type="video/mp4" />
-                </video>
-            </section>
-
+        <div className='mt-5 container'>
+            <div className='card'>
+                <div className='card-header'>
+                    <h1>{videoTitle}</h1>
+                </div>
+                <div className='card-body'>
+                    <section class="row video-container" >
+                        <video class="col-12" id="player" autoplay controls >
+                            <source id='video-source' src={aUrl} type="video/mp4" />
+                        </video>
+                    </section>
+                </div>
+            </div>
+            <br />
             <div class="row tm-mb-90 tm-gallery  ml-2 mr-2">
                 {
                     props.tutorials.map((a) => (
@@ -46,7 +54,7 @@ function VideoSection(props) {
                                 <img src={process.env.PUBLIC_URL + a.thumbnail} alt={a.title + ' image'} />
                                 <figcaption class="d-flex align-items-center justify-content-center">
                                     <h2>{a.title}</h2>
-                                    <a href="#player" onClick={() => handleClick(a.url)} />
+                                    <a href="#player" onClick={() => handleClick(a.url, a.title)} />
                                 </figcaption>
                             </figure>
                         </div>))

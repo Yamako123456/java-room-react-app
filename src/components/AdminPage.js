@@ -38,7 +38,7 @@ function AdminPage({ tutorials, setTutorials }) {
         <div className='mt-5 container'>
             <div className='card'>
                 <div className='card-header'>
-                    <h1>Demo - add new video</h1>
+                    <h1>Demo - Let's add new video!</h1>
                 </div>
                 <div className='card-body'>
 
@@ -47,7 +47,7 @@ function AdminPage({ tutorials, setTutorials }) {
                     <div className="mt-5">
                         <form>
                             <div className="mb3">
-                                <label className="form-label" for="videos">Choose a video from the list:</label>
+                                <label className="form-label" for="videos">Click the list below and choose a sample video to add:</label>
                                 <select id="videos" name="videos" className="form-control" onChange={videoSelected} >
                                     <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">Big Buck Bunny</option>
                                     <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">For Bigger Blazes</option>
@@ -57,6 +57,7 @@ function AdminPage({ tutorials, setTutorials }) {
                                     <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4">Tears of Steel</option>
                                 </select>
                             </div>
+                            <br />
                             <button type='button' className="btn btn-primary" onClick={addVideo}>
                                 Add Video
                             </button>

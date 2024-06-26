@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom';
+
 import AdminPage from './AdminPage';
 
-function FooterSection() {
+function FooterSection({ tutorials, setTutorials }) {
     // Don't ever forget curly brackets when you pass multiple props. 
     // If you forget, no matter how many parameters you have, it'll put everything in to the first parameter just like props
+
+
+    const handleNavigateToAdmin = () => {
+        window.location.href = '/admin';
+    }
+
     return (
         <div>
             <footer class=" footer-container d-flex  pb-3">
@@ -13,14 +20,11 @@ function FooterSection() {
                             <h3 class="mb-4">Links</h3>
                             <ul class="footer-links pl-0">
                                 <li><a href="https://oarfish-sphere-sxsk.squarespace.com/" target="_blank">Company</a></li>
-                                {/* <li><a href="#">Contact</a></li> */}
                                 <li>
-
-
-
-                                    {/* <Link to="/admin">Go to Admin Page</Link> */}
-
-
+                                    {/* <Link to={`/admin?tutorials=${encodeURIComponent(JSON.stringify(tutorials))}`}>
+                                        Go to Admin
+                                    </Link> */}
+                                    <button onClick={handleNavigateToAdmin}>Go to Admin</button>
                                 </li>
                             </ul>
                         </div>

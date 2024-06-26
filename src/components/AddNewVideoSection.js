@@ -26,27 +26,30 @@ function AddNewVideoSection(props) {
                         type="text"
                         className="form-control"
                         required
+                        value={title}
                         onChange={e => setTitle(e.target.value)}
                     ></input>
                 </div>
 
                 <div className="mb-3">
-                    <label className="form-label" >Video URL</label>
+                    <label className="form-label" >Video URL ( try https://youtu.be/0AzTcaZAkF0?si=P2Q1YsgSXF33Ctbj  )</label>
                     <input
                         type="text"
                         className="form-control"
                         required
+                        value={url}
                         onChange={e => setUrl(e.target.value)}
                     ></input>
                 </div>
 
                 <div className="mb-3">
-                    <label className="form-label" >Thumbnail URL</label>
+                    <label className="form-label" >Thumbnail URL ( try /img/sampleThumbnail1.jpg )</label>
                     <input
                         type="text"
                         className="form-control"
                         rows={30}
                         required
+                        value={thumbnail}
                         onChange={e => setThumbnail(e.target.value)}
                     ></input>
                 </div>
@@ -59,6 +62,7 @@ function AddNewVideoSection(props) {
                         className="form-control"
                         rows={30}
                         required
+                        value={comment}
                         onChange={e => setComment(e.target.value)}
                     ></textarea>
                 </div>

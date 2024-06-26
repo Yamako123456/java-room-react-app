@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import ReactPlayer from 'react-player';
 
 const VideoPlayer = (props) => {
+
   const [playing, setPlaying] = useState(false);
+  
+  const playerRef = useRef(null)
+  
+  useEffect(()=>{
+    setPlaying(true)
+    console.log('useEffect')
+    playerRef.current.focus();
+  })
+  
 
   const handlePlayPause = () => {
     setPlaying(!playing);
   };
 
   return (
-    <div>
+    <div ref={playerRef} >
       <ReactPlayer 
         url= {props.vidUrl}
         controls

@@ -36,16 +36,23 @@ function AdminPage({ tutorials, setTutorials }) {
             </div> 
             <br/>
             <div className='card'>
-                <p class="tagline">
-                    Add Video                        
-                </p>
-                <AddNewVideoSection addVideo={addVideo} />
+                <div className='card-header'>
+                    <h1>Add Video</h1>
+                    <p>All fields required.</p>
+                </div>
+
+                <div className='card-body'>
+                    <AddNewVideoSection addVideo={addVideo} />
+                </div>
             </div><br/>
             <div className='card'>
-                <p class="tagline">
-                    Preview below                        
-                </p>
+                <div className='card-header'>
+                    <h1>Test New Video Tile</h1>
+                </div>
+
+                <div className='card-body'>
                     <VideoSection tutorials={tutorials} />
+                </div>
             </div>
         </div>
     )

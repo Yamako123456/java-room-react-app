@@ -262,7 +262,7 @@ function App() {
         </Routes>
       </Router>
      
-      <HomePage tutorials={tutorials} setTutorials={setTutorials} />
+      {/* <HomePage tutorials={tutorials} setTutorials={setTutorials} /> */}
 
     </div>
   );

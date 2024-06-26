@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import TutorialItem from './TutorialItem';
 import ReactPlayer from 'react-player'
 import EditorSection from "./EditorSection";
-import VideoPlayer from "../VideoPlayer";
+import VideoPlayer from "./VideoPlayer";
 
 function VideoSection(props) {
   
@@ -28,21 +28,27 @@ function VideoSection(props) {
     const [videoTitle, setVideoTitle] = useState(INITIAL_NAME);
     const [aUrl, setUrl] = useState(() => INITIAL_URL)
     const [comment, setComment] = useState(() => INITIAL_COMMENT);
+    const [focusPlayer, setFocusPlayer] = useState(false)
 
     function handleClick(vidUrl, vidTitle, vidComment) {
-
         setUrl(vidUrl)
         setVideoTitle(vidTitle)
         setComment(vidComment)
+        
+        const videoPlayerElement = document.getElementById('player-container');
+        if (videoPlayerElement) {
+            videoPlayerElement.scrollIntoView({ behavior: 'smooth'});
+        }
+        // setFocusPlayer(true)
     }
-
+  
     return (
         <div className='mt-5 container'>
             <div className='card'>
                 <div className='card-header'>
                     <h1>{videoTitle}</h1>
                 </div>
-                <div className='card-body'>
+                <div id ='player-container' className='card-body'>
                         <VideoPlayer 
                             vidUrl={aUrl} 
                             vidTitle={videoTitle}

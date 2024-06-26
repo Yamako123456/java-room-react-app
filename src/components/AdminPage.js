@@ -1,6 +1,7 @@
 import { useState } from "react";
 import VideoTable from "./VideoTable"
 import AddNewVideoSection from "./AddNewVideoSection";
+import VideoSection from "./VideoSection";
 
 function AdminPage({ tutorials, setTutorials }) {
 
@@ -22,6 +23,7 @@ function AdminPage({ tutorials, setTutorials }) {
     return (
 
         <div className='mt-5 container'>
+            <h1 class='tagline'>ADMIN PAGE</h1>        
             <div className='card'>
                 <div className='card-header'>
                     <h1>Currently contained video list</h1>
@@ -29,9 +31,21 @@ function AdminPage({ tutorials, setTutorials }) {
                 <div className='card-body'>
 
                     <VideoTable tutorials={tutorials} />
-                    <AddNewVideoSection addVideo={addVideo} />
-
-                </div>
+                
+                </div>   
+            </div> 
+            <br/>
+            <div className='card'>
+                <p class="tagline">
+                    Add Video                        
+                </p>
+                <AddNewVideoSection addVideo={addVideo} />
+            </div><br/>
+            <div className='card'>
+                <p class="tagline">
+                    Preview below                        
+                </p>
+                    <VideoSection tutorials={tutorials} />
             </div>
         </div>
     )

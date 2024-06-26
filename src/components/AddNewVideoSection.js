@@ -10,6 +10,10 @@ function AddNewVideoSection(props) {
     const submitVideo = () => {
         if (title !== '' && url !== '' && thumbnail !== '' && comment !== '') {
             props.addVideo(title, url, thumbnail, comment);
+            setTitle('');
+            setUrl('');
+            setThumbnail('');
+            setComment('');
         }
     };
 
@@ -49,7 +53,7 @@ function AddNewVideoSection(props) {
 
 
                 <div className="mb-3">
-                    <label className="form-label" >Java code for main method in the entry Point class wi</label>
+                    <label className="form-label" >Java code that user can run in JDoodle compiler such as a entry-point class with the main method.</label>
                     <textarea
                         type="text"
                         className="form-control"
@@ -62,8 +66,7 @@ function AddNewVideoSection(props) {
                 <br />
                 <button
                     type='button'
-                    className="btn 
-                    btn-primary"
+                    className="btn btn-primary"
                     onClick={submitVideo}>
                     Add Video
                 </button>

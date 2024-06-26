@@ -261,7 +261,7 @@ function App() {
           <Route path="/admin" element={<AdminPage tutorials={tutorials} setTutorials={setTutorials} />} />
         </Routes>
       </Router>
-      <AdminPage tutorials={tutorials} setTutorials={setTutorials} />
+     
       <HomePage tutorials={tutorials} setTutorials={setTutorials} />
 
     </div>

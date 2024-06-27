@@ -254,15 +254,17 @@ function App() {
 
   return (
     <div class="container">
-
+{/* 
       <Router>
         <Routes>
           <Route path="/" element={<HomePage tutorials={tutorials} setTutorials={setTutorials} />} />
           <Route path="/admin" element={<AdminPage tutorials={tutorials} setTutorials={setTutorials} />} />
         </Routes>
       </Router>
+      */}
      
-      {/* <HomePage tutorials={tutorials} setTutorials={setTutorials} /> */}
+      <HomePage tutorials={tutorials} setTutorials={setTutorials} />
+    
     </div>
   );
 }

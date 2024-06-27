@@ -21,7 +21,7 @@ function HomePage({ tutorials, setTutorials }) {
 
             <VideoSection tutorials={tutorials} />
 
-            <DemoSection tutorials={tutorials} setTutorials={setTutorials} />
+            {/* <DemoSection tutorials={tutorials} setTutorials={setTutorials} /> */}
 
             <FooterSection />
         </div>

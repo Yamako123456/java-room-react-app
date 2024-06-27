@@ -3,6 +3,8 @@ import TutorialItem from './TutorialItem';
 import ReactPlayer from 'react-player'
 import EditorSection from "./EditorSection";
 import VideoPlayer from "./VideoPlayer";
+import CodeSnipetSection from "./CodeSnipetSection";
+import JDoodleEmbed from "./JDoodleEmbed";
 
 function VideoSection(props) {
   
@@ -54,19 +56,12 @@ function VideoSection(props) {
                             vidTitle={videoTitle}
                         />
                 </div>
-                <div className='card-body'>
-                    <p>
-                        Once you done watching the video, try it out in the built-in compiler! Copy and paste the following code to editor at the end of this page and click Execute!
-                    </p>
-                    <hr />
-                    <pre>{comment}</pre>
-                </div>
-
             </div>
+            <CodeSnipetSection title={videoTitle} comment={comment}/>
             <br />
             <div class="row tm-mb-90">
                 <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col">
-                <p class="tagline">Click to play video!</p>
+                <p class="tagline">Click to select video!</p>
                 </div>
             </div>
             <div class="row tm-mb-90 tm-gallery  ml-2 mr-2">
@@ -83,6 +78,7 @@ function VideoSection(props) {
                         </div>))
                 }
             </div>
+        
         </div>
     )
 }

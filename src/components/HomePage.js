@@ -23,7 +23,7 @@ function HomePage({ tutorials, setTutorials }) {
 
             <DemoSection tutorials={tutorials} setTutorials={setTutorials} />
 
-
+            <FooterSection />
         </div>
     );
 }

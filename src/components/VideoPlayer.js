@@ -8,8 +8,7 @@ const VideoPlayer = (props) => {
   const playerRef = useRef(null)
   
   useEffect(()=>{
-    setPlaying(true)
-    console.log('useEffect')
+    // console.log('useEffect')
     playerRef.current.focus();
   })
   

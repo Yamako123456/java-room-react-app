@@ -3,20 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import FooterSection from './components/FooterSection';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);
-
-const footer = ReactDOM.createRoot(document.getElementById('footer'));
-footer.render(
-  <React.StrictMode>
-    <FooterSection />
-  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

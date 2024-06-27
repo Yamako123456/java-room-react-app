@@ -24,16 +24,8 @@ function AdminPage({ tutorials, setTutorials }) {
 
         <div className='mt-5 container'>
             <h1 class='tagline'>ADMIN PAGE</h1>        
-            <div className='card'>
-                <div className='card-header'>
-                    <h1>Currently contained video list</h1>
-                </div>
-                <div className='card-body'>
-
-                    <VideoTable tutorials={tutorials} />
-                
-                </div>   
-            </div> 
+             <VideoTable tutorials={tutorials} />
+         
             <br/>
             <div className='card'>
                 <div className='card-header'>

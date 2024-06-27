@@ -5,7 +5,7 @@ function CodeSnipetSection(props) {
         <div>
             <div className="card">
                 <div className="card-header">
-                    <h1>Compile Code In JDoodle</h1>    
+                    <h1>Compile {props.title} Code In JDoodle</h1>    
                     <p>
                      Write your code directly or copy and paset the following code into JDoodle Editor to compile!
                     </p>

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/java-room-react-app/static/css/main.3bccca83.css",
+    "main.js": "/java-room-react-app/static/js/main.137a1f91.js",
+    "static/js/787.69142c40.chunk.js": "/java-room-react-app/static/js/787.69142c40.chunk.js",
+    "static/media/warm-and-cold-light.jpg": "/java-room-react-app/static/media/warm-and-cold-light.23b37d162594668247b9.jpg",
+    "index.html": "/java-room-react-app/index.html",
+    "static/media/EditorSection": "/java-room-react-app/static/media/EditorSection.d15cd6202acb0cb1076c",
+    "main.3bccca83.css.map": "/java-room-react-app/static/css/main.3bccca83.css.map",
+    "main.137a1f91.js.map": "/java-room-react-app/static/js/main.137a1f91.js.map",
+    "787.69142c40.chunk.js.map": "/java-room-react-app/static/js/787.69142c40.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3bccca83.css",
+    "static/js/main.137a1f91.js"
+  ]
+}

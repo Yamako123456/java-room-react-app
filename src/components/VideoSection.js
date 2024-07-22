@@ -4,7 +4,6 @@ import ReactPlayer from 'react-player'
 import EditorSection from "./EditorSection";
 import VideoPlayer from "./VideoPlayer";
 import CodeSnipetSection from "./CodeSnipetSection";
-import JDoodleEmbed from "./JDoodleEmbed";
 
 function VideoSection(props) {
   

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const CodeSnippetSection = (props) => {
@@ -9,12 +9,17 @@ const CodeSnippetSection = (props) => {
   const proxyUrl = 'https://thingproxy.freeboard.io/fetch/';
   const apiUrl = 'https://api.jdoodle.com/v1/execute';
 
+  // Update code state when props.comment changes
+  useEffect(() => {
+    setCode(props.comment);
+  }, [props.comment]);
+
   const compileCode = async () => {
     setLoading(true);
     try {
       const response = await axios.post(proxyUrl + apiUrl, {
         clientId: '10d9939a265742d942b10f18f3ad8413',
-        clientSecret: 'bacefb77dd1f47d216823c336f28c50c46a33acf447d7b858dae32c70d7a5d57',
+        clientSecret: '89a94bb66b10e55b2b4aa1680353d349ba0dfe51da467f05739de2be5d37e64d',
         script: code,
         stdin: '',
         language: 'java',
@@ -36,15 +41,15 @@ const CodeSnippetSection = (props) => {
 
   return (
     <div className='card mt-3'>
-      <h1 className='card-body' >
+      <h1 className='card-body'>
         Code Snippet for {props.title}
       </h1>
-      <textarea className='card-body form-control'
+      <textarea
+        className='card-body form-control'
         value={code}
         onChange={(e) => setCode(e.target.value)}
         placeholder="Write your Java code here"
         rows="25"
-        
       />
       <button onClick={compileCode} className='btn btn-primary' disabled={loading}>
         {loading ? 'Compiling...' : 'Compile Code'}

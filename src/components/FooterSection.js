@@ -19,7 +19,7 @@ function FooterSection() {
                         <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
                             <h3 class="mb-4">Links</h3>
                             <ul class="footer-links pl-0">
-                                <li><a href="https://oarfish-sphere-sxsk.squarespace.com/" target="_blank">Company</a></li>
+                                <li><a href="https://miyokoyamakawaportfolio.com/" target="_blank">Company</a></li>
                                 {/* <li>
                                     <button onClick={handleNavigateToAdmin}>Go to Admin</button>
                                 </li> */}

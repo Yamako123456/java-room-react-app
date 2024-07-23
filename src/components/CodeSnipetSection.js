@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const CodeSnippetSection = () => {
-  const [code, setCode] = useState('public class MyHelloWorld {\n    public static void main(String[] args) {\n        System.out.println("Hello, World!");\n    }\n}');
+const CodeSnippetSection = (props) => {
+  const [code, setCode] = useState(props.comment);
   const [output, setOutput] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -35,15 +35,18 @@ const CodeSnippetSection = () => {
   };
 
   return (
-    <div>
-      <textarea
+    <div className='card mt-3'>
+      <h1 className='card-body' >
+        Code Snippet for {props.title}
+      </h1>
+      <textarea className='card-body form-control'
         value={code}
         onChange={(e) => setCode(e.target.value)}
         placeholder="Write your Java code here"
-        rows="10"
-        cols="50"
+        rows="25"
+        
       />
-      <button onClick={compileCode} disabled={loading}>
+      <button onClick={compileCode} className='btn btn-primary' disabled={loading}>
         {loading ? 'Compiling...' : 'Compile Code'}
       </button>
       <pre>{output}</pre>

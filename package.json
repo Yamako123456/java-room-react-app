@@ -16,13 +16,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "react-scripts start",  // Use react-scripts start for local development
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",    // For deploying to GitHub Pages (not needed for Heroku)
+    "deploy": "gh-pages -d build"   // For deploying to GitHub Pages (not needed for Heroku)
   },
   "eslintConfig": {
     "extends": [

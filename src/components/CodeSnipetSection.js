@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import JDoodleEmbed from './JDoodleEmbed';
+import VideoViewerSection from './VideoViewerSection'
 
 const CodeSnippetSection = (props) => {
   const [code, setCode] = useState(props.comment);
@@ -8,6 +10,8 @@ const CodeSnippetSection = (props) => {
 
   const proxyUrl = 'https://thingproxy.freeboard.io/fetch/';
   const apiUrl = 'https://api.jdoodle.com/v1/execute';
+
+  const [showEmbed, setShowEmbed] = useState(false);
 
   // Update code state when props.comment changes
   useEffect(() => {
@@ -39,6 +43,9 @@ const CodeSnippetSection = (props) => {
     setLoading(false);
   };
 
+  const compileCodeByEmbed = () => {
+    setShowEmbed(!showEmbed);
+  }
   return (
     <div className='card mt-3'>
       <h1 className='card-body'>
@@ -51,10 +58,16 @@ const CodeSnippetSection = (props) => {
         placeholder="Write your Java code here"
         rows="25"
       />
-      <button onClick={compileCode} className='btn btn-primary' disabled={loading}>
-        {loading ? 'Compiling...' : 'Compile Code'}
+      <button onClick={compileCodeByEmbed} className='btn btn-primary' disabled={loading}>
+        {loading ? 'Compiling...' : showEmbed ? 'Close Copiler Window' : 'Compile Code'}
       </button>
       <pre>{output}</pre>
+
+      {showEmbed && (
+
+        <JDoodleEmbed />
+      
+      )}
     </div>
   );
 };
